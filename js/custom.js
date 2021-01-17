@@ -25,14 +25,32 @@ let totalInterestPayment = 0;
 
 // let remainingBalance = remainingBalance - principalPayment;
 
-for (let index = 1; index < term; index++) {
-
+for (let index = 1; index <= term; index++) {
+  month = index;
   totalInterestPayment += interestPayment;
   principalPayment = totalMonthlyPayment - interestPayment;
   remainingBalance = remainingBalance - principalPayment;
   interestPayment = remainingBalance * IRate/ 1200;
   payment += totalMonthlyPayment;
- 
+  totalInterest = loan - principalPayment;
+  totalCost = loan + totalInterestPayment;
+
+
+
+
+    document.getElementById("Mpayments1").innerHTML = totalMonthlyPayment.toFixed(2);
+    document.getElementById("tPrincipalOutPut").innerHTML = loan;
+      document.getElementById("tInterestOutput").innerHTML = totalInterestPayment.toFixed(2);
+      document.getElementById("tCostOutput").innerHTML = totalCost.toFixed(2);
+    
+    document.getElementById("month").innerHTML = month;
+    document.getElementById("balance").innerHTML = remainingBalance.toFixed(2);
+    document.getElementById("payment").innerHTML = payment.toFixed(2);
+      document.getElementById("principal").innerHTML = principalPayment.toFixed(2);
+     document.getElementById("interest").innerHTML = interestPayment.toFixed(2);
+     document.getElementById("totalInterest").innerHTML = totalInterestPayment.toFixed(2);
+
+
 }
 
 
@@ -93,17 +111,7 @@ for (let index = 1; index < term; index++) {
 
 
 // output resolved Data
-document.getElementById("Mpayments1").innerHTML = totalMonthlyPayment.toFixed(2);
-document.getElementById("tPrincipalOutPut").innerHTML = loan;
-//  document.getElementById("tInterestOutput").innerHTML = totalInterest.toFixed(2);
-//  document.getElementById("tCostOutput").innerHTML = totalCost.toFixed(2);
 
-document.getElementById("month").innerHTML = month;
-document.getElementById("balance").innerHTML = remainingBalance.toFixed(2);
-document.getElementById("payment").innerHTML = payment.toFixed(2);
-  document.getElementById("principal").innerHTML = principalPayment.toFixed(2);
- document.getElementById("interest").innerHTML = interestPayment.toFixed(2);
- document.getElementById("totalInterest").innerHTML = totalInterestPayment.toFixed(2);
 
 
 
