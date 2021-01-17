@@ -6,36 +6,56 @@ let loan = parseInt(document.getElementById("loanInput").value);
 let term = parseInt(document.getElementById("termInput").value);
 let IRate = parseInt(document.getElementById("iRateInput").value);
 
+let month = new Array;
 
 let totalMonthlyPayment = (loan) * (IRate/1200) / (1- Math.pow((1 + IRate/1200),-term));
 
-let totalInterest = (IRate) / 100 / 12;
+let remainingBalance = loan;
+
+let interestPayment = remainingBalance * IRate/1200;
+
+let principalPayment = totalMonthlyPayment - interestPayment;
+
+let payment = 0;
+
+let totalInterestPayment = 0;
+
+
+
+
+// let remainingBalance = remainingBalance - principalPayment;
+
+for (let index = 1; index < term; index++) {
+
+  totalInterestPayment += interestPayment;
+  principalPayment = totalMonthlyPayment - interestPayment;
+  remainingBalance = remainingBalance - principalPayment;
+  interestPayment = remainingBalance * IRate/ 1200;
+  payment += totalMonthlyPayment;
+ 
+}
+
+
+
+// Total Monthly Payment = (amount loaned) * (rate/1200) / (1 – (1 + rate/1200)(-Number of Months) )
+// Remaining Balance before the very first month equals the amount of the loan.
+// Interest Payment = Previous Remaining Balance * rate/1200
+// Principal Payment = Total Monthly Payment - Interest PaymentAt end each month, 
+// Remaining Balance = Previous Remaining Balance - principal payments
 
 
 
 
 
-// let totalCost = loan + totalInterest;
-
-// let payment = totalMonthlyPayment
-
-//  let principalPayment = totalMonthlyPayment - interestPayment;
-
-//  let balance = loan - totalMonthlyPayment;
-
-//  let interestPayment = balance * IRate/1200;
-
-// let totalInterestPayment = interestPayment + prevInterestPayment;
 
 
 // run through algo
-let month = new Array;
 
 
- for (let index = 1; index <= term; index++) {
-     month += [index];
+
+ 
      
-}
+
 
 
     
@@ -63,12 +83,7 @@ let month = new Array;
 
      
     
-    
-
-// let remainingbalance = loan - totalMontlyPayment;
-// let interestPayment =  remainingbalance * rate/1200;
-// let principalPayment =  totalMonthlyPayment - interestPayment at end of each month;
-// let remainingBalance =  Previous Remaining Balance - principal payments;
+  
 
 
 
@@ -80,15 +95,16 @@ let month = new Array;
 // output resolved Data
 document.getElementById("Mpayments1").innerHTML = totalMonthlyPayment.toFixed(2);
 document.getElementById("tPrincipalOutPut").innerHTML = loan;
- document.getElementById("tInterestOutput").innerHTML = totalInterest.toFixed(2);
- document.getElementById("tCostOutput").innerHTML = totalCost.toFixed(2);
+//  document.getElementById("tInterestOutput").innerHTML = totalInterest.toFixed(2);
+//  document.getElementById("tCostOutput").innerHTML = totalCost.toFixed(2);
 
 document.getElementById("month").innerHTML = month;
- 
+document.getElementById("balance").innerHTML = remainingBalance.toFixed(2);
+document.getElementById("payment").innerHTML = payment.toFixed(2);
   document.getElementById("principal").innerHTML = principalPayment.toFixed(2);
-//   document.getElementById("interest").innerHTML = interestPayment.toFixed(2);
+ document.getElementById("interest").innerHTML = interestPayment.toFixed(2);
  document.getElementById("totalInterest").innerHTML = totalInterestPayment.toFixed(2);
-document.getElementById("balance").innerHTML = balance.toFixed(2);
+
 
 
 
