@@ -6,7 +6,6 @@ let loan = parseInt(document.getElementById("loanInput").value);
 let term = parseInt(document.getElementById("termInput").value);
 let IRate = parseInt(document.getElementById("iRateInput").value);
 // Formulas
-let month = new Array;
 
 let totalMonthlyPayment = (loan) * (IRate/1200) / (1- Math.pow((1 + IRate/1200),-term));
 
@@ -32,6 +31,7 @@ let inp = ``;
 
 let pay = ``;
 
+let month = ``;
 
 for (let i = 1; i <= term; i++) {
   
@@ -43,18 +43,20 @@ for (let i = 1; i <= term; i++) {
   payment += totalMonthlyPayment;
   totalInterest = loan - principalPayment;
   totalCost = loan + totalInterestPayment;
-  month += [i];
+  
   
 
-  tip += `${totalInterestPayment.toFixed(2)}`;
+  tip += ` ${totalInterestPayment.toFixed(2)} `;
     
-  Principal += `${principalPayment.toFixed(2)}`;
+  Principal += ` ${principalPayment.toFixed(2)} `;
     
-  Balance += `${remainingBalance.toFixed(2)}`;
+  Balance += ` ${remainingBalance.toFixed(2)} `;
     
-  inp += `${interestPayment.toFixed(2)}`;
+  inp += ` ${interestPayment.toFixed(2)} `;
     
-  pay += `${payment.toFixed(2)}`;
+  pay += ` ${payment.toFixed(2)} `;
+
+  month += ` ${[i]} `;
 
  }
 

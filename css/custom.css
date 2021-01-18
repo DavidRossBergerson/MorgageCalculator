@@ -7,6 +7,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     
+    
 }
 table td {
     border: 1px solid #ccc;
@@ -15,5 +16,21 @@ table td {
 table .absorbing-column {
     width: 100%;
     height: 100%;
+    
+}
+
+.graph{
+margin-top: 2%;
+word-wrap: break-word;
+text-align: center;
+}
+
+.vertext{
+    display:table-column;
+    
+}
+
+.down{
+    word-break: break-all
     
 }
