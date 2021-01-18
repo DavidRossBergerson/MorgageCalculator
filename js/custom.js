@@ -21,17 +21,19 @@ let totalInterestPayment = 0;
 
 
 
-let tip = ``;
+// let tip = ``;
 
-let Principal = ``;
+// let Principal = ``;
 
-let Balance = ``;
+// let Balance = ``;
 
-let inp = ``;
+// let inp = ``;
 
-let pay = ``;
+// let pay = ``;
 
-let month = ``;
+// let month = ``;
+
+let table = ``
 
 for (let i = 1; i <= term; i++) {
   
@@ -46,17 +48,23 @@ for (let i = 1; i <= term; i++) {
   
   
 
-  tip += ` ${totalInterestPayment.toFixed(2)} `;
-    
-  Principal += ` ${principalPayment.toFixed(2)} `;
-    
-  Balance += ` ${remainingBalance.toFixed(2)} `;
-    
-  inp += ` ${interestPayment.toFixed(2)} `;
-    
-  pay += ` ${payment.toFixed(2)} `;
+  table += ` ${[i]} 
+  
+  $${payment.toFixed(2)}
 
-  month += ` ${[i]} `;
+  $${principalPayment.toFixed(2)} 
+  
+  $${interestPayment.toFixed(2)} 
+  
+  $${totalInterestPayment.toFixed(2)} 
+    
+  $${remainingBalance.toFixed(2)}`;
+    
+   
+    
+  
+
+   
 
  }
 
@@ -80,13 +88,15 @@ document.getElementById("tPrincipalOutPut").innerHTML = loan;
 document.getElementById("tInterestOutput").innerHTML = totalInterestPayment.toFixed(2);
 document.getElementById("tCostOutput").innerHTML = totalCost.toFixed(2);
 
-document.getElementById("month").innerHTML = month;
+// document.getElementById("month").innerHTML = month;
 
-document.getElementById("payment").innerHTML = pay;
-document.getElementById("principal").innerHTML = Principal;
-document.getElementById("interest").innerHTML = inp;
-document.getElementById("totalInterest").innerHTML = tip;
-document.getElementById("balance").innerHTML = Balance;
+// document.getElementById("payment").innerHTML = pay;
+// document.getElementById("principal").innerHTML = Principal;
+// document.getElementById("interest").innerHTML = inp;
+// document.getElementById("totalInterest").innerHTML = tip;
+// document.getElementById("balance").innerHTML = Balance;
+
+document.getElementById("table").innerHTML = table;
 
 
 
