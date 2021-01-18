@@ -1,4 +1,6 @@
 document.getElementById("btnUserData").addEventListener("click", MortgageCalculator);
+
+
 function MortgageCalculator(){
 
 // get user data
@@ -97,11 +99,23 @@ document.getElementById("tCostOutput").innerHTML = totalCost.toFixed(2);
 // document.getElementById("balance").innerHTML = Balance;
 
 document.getElementById("table").innerHTML = table;
+};
+document.getElementById("btnClear").addEventListener("click", Clear)
+function Clear(){
+  
+  document.getElementById("loanInput").value = "";
+  document.getElementById("termInput").value = "";
+  document.getElementById("iRateInput").value = "";
+  document.getElementById("Mpayments1").innerHTML = "";
+  document.getElementById("tPrincipalOutPut").innerHTML = "";
+  document.getElementById("tInterestOutput").innerHTML = "";
+  document.getElementById("tCostOutput").innerHTML = "";
+  document.getElementById("table").innerHTML = "";
+
+};
 
 
 
-
-}
 
    
 
