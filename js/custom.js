@@ -42,23 +42,23 @@ for (let i = 1; i <= term; i++) {
   principalPayment = totalMonthlyPayment - interestPayment;
   remainingBalance = remainingBalance - principalPayment;
   interestPayment = remainingBalance * IRate/ 1200;
-  payment += totalMonthlyPayment;
+  payment = totalMonthlyPayment;
   totalInterest = loan - principalPayment;
   totalCost = loan + totalInterestPayment;
   
   
 
-  table += ` ${[i]} 
+  table += `<tr><td> ${[i]} </td>
   
-  $${payment.toFixed(2)}
+  <td>$${payment.toFixed(2)}</td>
 
-  $${principalPayment.toFixed(2)} 
+  <td>$${principalPayment.toFixed(2)}</td> 
   
-  $${interestPayment.toFixed(2)} 
+  <td>$${interestPayment.toFixed(2)}</td> 
   
-  $${totalInterestPayment.toFixed(2)} 
+  <td>$${totalInterestPayment.toFixed(2)}</td> 
     
-  $${remainingBalance.toFixed(2)}`;
+  <td>$${remainingBalance.toFixed(2)}</td>`;
     
    
     
