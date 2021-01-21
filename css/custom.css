@@ -13,13 +13,25 @@
 
 @media (min-width: 768px) {
     header{
-        background-image: url("/img/calculators-header.jpg");
+        background-image: url("/img/calc.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: fixed;
+        background-position:fixed;
         font-weight:bolder;
         text-decoration-color: black  ;
-    
+        
+        }
+        .hero{
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 10px 0;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        body{
+            background-color:beige;
         }
 
     }

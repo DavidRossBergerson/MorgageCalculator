@@ -50,10 +50,8 @@
     <div >
         <div class="row offset-3">
            <div>
-        <table >
-            <tr>
-                <th>User Data</th>
-            </tr>
+        <table class="table table-striped table-dark table-bordered" >
+        
             <tr>
                 <td>loan amount </td> <td><input type="text" id="loanInput" value="25000"></td>
             </tr>
@@ -64,101 +62,37 @@
                 <td>Interest Rate<td><input type="text" id="iRateInput" value="5%"></td>
             </tr>
         </table>
-        <button class="btn btn-primary" id="btnUserData">Input Data</button><button class="btn btn-dark" id="btnClear">Clear</button>
+        <button class="btn btn-warning btn-lg mt-4 ml-3" id="btnUserData">Input Data</button><button class="btn btn-dark btn-lg mt-4 ml-5" id="btnClear">Clear Data</button>
             </div>
-            <div class="center offset-1">
-                <table >
-                  <div class="card text-center">
-                    <img class="card-img-top" src="holder.js/100px180/" alt="">
-                    <div class="card-body">
-                      <h4 class="card-title">Your Monthly Payments</h4>
-                      <p class="card-text" id="Mpayments1"></p>
-                    </div>
-                  </div>
+            
+            <div >
+                <div class="row offset-5">
+                   <div>
+                <table class="table table-striped table-warning table-bordered ml-5" >
+                <tr>
+                    <td > Monthly Pay</td>
+                   <td><output id="Mpayments1"></td>
+                </tr>
                     <tr>
-                        <td>Total Principal:</td><td id="tPrincipalOutPut"></td>
-                        
+                        <td>Total Principal</td> <td ><output class="justify-content-center" type="text" id="tPrincipalOutPut" value=""></td>
                     </tr>
                     <tr>
-                        <td>Total Interest:</td><td><p id="tInterestOutput"></p></td>
+                        <td>Total Interest<td><output type="text" id="tInterestOutput" value=""></td>
                     </tr>
                     <tr>
-                        <td>Total Cost:</td><td><div id="tCostOutput"></div></td>
+                        <td>Total Cost<td><output type="text" id="tCostOutput" value=""></td>
                     </tr>
                 </table>
-                    </div>
-                </div>
+               </div>
+            </div>        
             </div>
-            
-            <!-- <div class="container center graph" >
-                <div class="row d-flex align-items-end ">
-                    <div class="col">
-                        <h3>Month</h3>
-                        <hr/>
-                    </div>
-                    <div class="col">
-                        <h3>Monthly Payments</h3>
-                        <hr/>
-                    </div>
-                    <div class="col">
-                        <h3>Principal Payments</h3>
-                        <hr/>
-                    </div>
-                    <div class="col">
-                        <h3>Interest Payments</h3>
-                        <hr/>
-                    </div>
-                    <div class="col">
-                        <h3>Total Interest Payments</h3>
-                        <hr/>
-                    </div>
-                    <div class="col">
-                        <h3>Balance</h3>
-                        <hr/>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col";>
-                        
-                        <div id="month" class="d-flex flex-column down" style="display: table-caption" ></div>
-                    </div>
-                    <div class="col">
-                        
-                        <p id="payment"></p>
-                    </div>
-                    <div class="col" >
-                        
-                        <p id="principal"></p>
-                    </div>
-                    <div class="col">
-                        
-                        <p id="interest"></p>
-                    </div>
-                    <div class="col">
-                        
-                        <p id="totalInterest"></p>
-                    </div>
-                    <div class="col">
-                        
-                        <p id="balance"></p>
-                    </div>
-
-                </div>
-            </div> -->
-            
-            
-            
-            
-            
-            
-        
-    
-    
-    
-    <div class=" container " >
-        <div class="row">
-        <table  class="table table-striped " >
-            <thead>
+        </div>        
+    </div>
+              
+        <div class=" container offset-2 mt-4" >
+    <div class="row">
+        <table  class="table table-striped table-warning" >
+        <thead>
             <tr>
                 <th>Month</th>
                 <th>Payment</th>
@@ -182,23 +116,6 @@
         </table>
         </div>
     </div>
-    
-
-  
-        
-           
-            
-            
-        
-  
-
-
-
-    
-
-
-
-      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
